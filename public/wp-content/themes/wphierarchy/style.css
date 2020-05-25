@@ -1,0 +1,386 @@
+/*
+Theme Name: WP Hierarchy
+Author: Lars Mackenzie
+Author URI: https://www.larsmackenzie.com
+Description: Demo theme for learning WordPress template hierarchy
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 0.1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wphierarchy
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body {
+    background-color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+  }
+  body.tag-50,
+  body.category-9 {
+    background-color: #a7ff91;
+  }
+  .site-header {
+    background-color: rgba(115, 115, 115, .9);
+    padding: 1vh 1vh 10vh 10vh;
+    color: white;
+    margin: 0;
+  }
+  h1, h2, h3, h4, h5, h6,
+  .site-title {
+    font-family: "Varela Round", sans-serif;
+  }
+  h1 a {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  h2 {
+    margin:  2rem 0 1rem;
+  }
+  
+  h2.search-title {
+    text-transform: capitalize;
+  }
+  
+  a {
+    color: #494329;
+    text-decoration: none;
+  }
+  main {
+    padding: 5vh;
+  }
+  pre {
+    background: #222;
+    padding: 10px;
+    border: 1px #777 solid;
+    color: #ededed;
+    font-family: monospace;
+    font-size: 1rem;
+  }
+  
+  video {
+    max-width: 100%;
+  }
+  
+  ul {
+    padding-left: 0;
+    margin-left: 20px;
+    list-style-position: outside;
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+  }
+  footer.site-footer {
+    margin: 2rem auto 1rem;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 0;
+    margin-top: 90vh;
+  }
+  .main-navigation li{
+    list-style-type: none;
+    display: inline-block;
+  }
+  
+  .main-navigation li a {
+    padding: 5px;
+  }
+  
+  .main-navigation li:hover>a {
+    color: #000;
+  }
+  
+  .main-navigation li.current-menu-item>a,
+  .main-navigation li.current-page-parent>a {
+    font-weight: bold;
+    color: #494329;
+  }
+  
+  .main-navigation li ul {
+    display: none
+  }
+  
+  .main-navigation li:hover ul {
+    display: block;
+    position: absolute;
+    margin-left: -10px;
+    z-index: 100;
+    background: #fff091;
+    padding: 5px 10px;
+  }
+  
+  .main-navigation li:hover ul li {
+    display: block;
+    margin: .5rem 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  #content article,
+  #content article div,
+  #content img {
+    max-width: 100%;
+  }
+  
+  #content img {
+    height: auto;
+  }
+  
+  #primary {
+    width: 70%;
+    float: left;
+  }
+  
+  
+  #primary.extended,
+  #primary.excerpt,
+  #primary.wordpress {
+    width: 100%;
+    float: none;
+  }
+  
+  article.post {
+    margin-bottom: 4rem;
+  }
+  
+  .author article.post {
+    margin-bottom: 2rem;
+  }
+  
+  .prev-posts,
+  .next-posts,
+  .archive article.portfolio {
+    width: 45%;
+    float: left;
+  }
+  
+  .next-posts {
+    text-align: right;
+    float: right;
+  }
+  
+  .archive article.portfolio:nth-child(even) {
+    margin-right: 5%;
+  }
+  
+  .form-submit input#submit,
+  .button {
+    border: 1px #ccc solid;
+    border-radius: 3px;
+    background: #fff;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    display: inline-block;
+  }
+  
+  .form-submit input#submit:hover,
+  .button:hover {
+    cursor: pointer;
+    border-color: #777;
+  }
+  
+  #secondary {
+    width: 25%;
+    float: right;
+  }
+  #secondary h2 {
+    font-size: 1.2rem;
+  }
+  
+  .byline {
+    color: #777;
+    font-size: .8rem;
+  }
+  
+  .byline a {
+    color: #777;
+    text-decoration: underline;
+    display: inline-block;
+  }
+  
+  .byline a:hover {
+    color: #564A71;
+  }
+  
+  .author-bio {
+    border-bottom: 1px #ccc solid;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .author-bio img {
+    float: left;
+  }
+
+  /* flexing  */
+ .flex-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .flex-between {
+    justify-content: space-between;
+  }
+
+  .attachment-post-thumbnail {
+    border-radius: 10px;
+  }
+  /*--------------------------------------------------------------
+  # Default WP Classes
+  --------------------------------------------------------------*/
+  
+  
+  .alignleft, img.alignleft {
+      margin-right: 1.5em;
+      display: inline;
+      float: left;
+  }
+  .alignright, img.alignright {
+      margin-left: 1.5em;
+      display: inline;
+      float: right;
+  }
+  .aligncenter, img.aligncenter {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      clear: both;
+  }
+  .wp-caption {
+      margin-bottom: 1.5em;
+      text-align: center;
+      padding-top: 5px;
+  }
+  .wp-caption img {
+      border: 0 none;
+      padding: 0;
+      margin: 0;
+  }
+  .wp-caption p.wp-caption-text {
+      line-height: 1.5;
+      font-size: 10px;
+      margin: 0;
+  }
+  .wp-smiley {
+      margin: 0 !important;
+      max-height: 1em;
+  }
+  blockquote.left {
+      margin-right: 20px;
+      text-align: right;
+      margin-left: 0;
+      width: 33%;
+      float: left;
+  }
+  blockquote.right {
+      margin-left: 20px;
+      text-align: left;
+      margin-right: 0;
+      width: 33%;
+      float: right;
+  }
+  .gallery dl {}
+  .gallery dt {}
+  .gallery dd {}
+  .gallery dl a {}
+  .gallery dl img {}
+  .gallery-caption {}
+  
+  .size-full {}
+  .size-large {}
+  .size-medium {}
+  .size-thumbnail {}
+  
+  
+  /*--------------------------------------------------------------
+  # Accessibility
+  --------------------------------------------------------------*/
+  /* Text meant only for screen readers. */
+  .screen-reader-text {
+      clip: rect(1px, 1px, 1px, 1px);
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+  
+  .screen-reader-text:focus {
+      background-color: #f1f1f1;
+      border-radius: 3px;
+      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+      clip: auto !important;
+      color: #21759b;
+      display: block;
+      font-size: 14px;
+      font-size: 0.875rem;
+      font-weight: bold;
+      height: auto;
+      left: 5px;
+      line-height: normal;
+      padding: 15px 23px 14px;
+      text-decoration: none;
+      top: 5px;
+      width: auto;
+      z-index: 100000; /* Above WP toolbar. */
+  }
+  .quote {
+    background-color: rgba(115, 115, 115, .9);
+    padding: 10vh;
+    color: white;
+    font-size: 3em;
+  }
+  .widget-area {
+    list-style: none;
+  }
+  /* Do not show the outline on the skip link target. */
+  #content[tabindex="-1"]:focus {
+      outline: 0;
+  }
+  
+
+  /* For mobile: */
+[class*="col-"] {
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-md-1 {width: 8.33%;}
+  .col-md-2 {width: 16.66%;}
+  .col-md-3 {width: 25%;}
+  .col-md-4 {width: 33.33%;}
+  .col-md-5 {width: 41.66%;}
+  .col-md-6 {width: 50%;}
+  .col-md-7 {width: 58.33%;}
+  .col-md-8 {width: 66.66%;}
+  .col-md-9 {width: 75%;}
+  .col-md-10 {width: 83.33%;}
+  .col-md-11 {width: 91.66%;}
+  .col-md-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
