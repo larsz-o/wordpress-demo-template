@@ -25,7 +25,7 @@ article.post {
   width: 100%;
 }
 audio {
-  width: 50vw;
+  width: 100%;
   filter: sepia(50%) drop-shadow(8px 8px 10px gray) invert(100%) saturate(3) contrast(70%);
 }
 .author article.post {
@@ -52,8 +52,9 @@ audio {
     color: #564A71;
   }
   .call-to-action {
-    background-color: rgba(115, 115, 115, .7);
-    padding: 10px;
+    /* background-color: rgba(115, 115, 115, .7); */
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
   #content article,
   #content article div,
@@ -141,8 +142,23 @@ audio {
    display: block;
    overflow: visible;
    z-index:-1;
-   margin-left: auto;
+  margin-left: auto;
   width: 50%;
+    
+ }
+ .hero-image-caption {
+  bottom: 100px;
+  color: #111;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  position: absolute;
+  right: 15px;
+  transform: rotateZ(-90deg) translateX(100%);
+  transform-origin: right bottom;
+  text-transform: uppercase;
  }
  html, body {
 font-family: 'Archivo', sans-serif;
