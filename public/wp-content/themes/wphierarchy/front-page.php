@@ -1,5 +1,5 @@
 
-<?php get_header();?>
+<?php get_header('splash');?>
 <div id="primary" class="content-area extended">
     <main id="main" class="site-main" role="main">
         <?php if (have_posts()) : while (have_posts()) : the_post();?>

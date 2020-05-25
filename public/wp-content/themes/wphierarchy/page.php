@@ -8,7 +8,6 @@
         <?php get_template_part( 'template-parts/content', 'none');?>
 <?php endif;?>
     </main>
-        <p>singular.php</p>
+        <p>page.php</p>
 </div>
-<?php get_sidebar( 'main-sidebar' ); ?>
 <?php get_footer();?>

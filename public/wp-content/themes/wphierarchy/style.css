@@ -14,22 +14,69 @@ Text Domain: wphierarchy
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+a {
+  color: #494329;
+  text-decoration: none;
+}
+.archive article.portfolio:nth-child(even) {
+  margin-right: 5%;
+}
+article.post {
+  margin-bottom: 4rem;
+}
+.attachment-post-thumbnail {
+  border-radius: 10px;
+}
+.author article.post {
+  margin-bottom: 2rem;
+}
+.author-bio {
+  border-bottom: 1px #ccc solid;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
 
+.author-bio img {
+  float: left;
+}
 body {
     background-color: #ffffff;
     font-family: "Open Sans", sans-serif;
     margin: 0;
   }
-  body.tag-50,
-  body.category-9 {
-    background-color: #a7ff91;
+.byline {
+    color: #777;
+    font-size: .8rem;
   }
-  .site-header {
-    background-color: rgba(115, 115, 115, .9);
-    padding: 1vh 1vh 10vh 10vh;
-    color: white;
-    margin: 0;
+  .byline a {
+    color: #777;
+    text-decoration: underline;
+    display: inline-block;
   }
+  .byline a:hover {
+    color: #564A71;
+  }
+  #content article,
+  #content article div,
+  #content img {
+    max-width: 100%;
+  }
+  
+  #content img {
+    height: auto;
+  }
+    /* flexing  */
+ .flex-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flex-end {
+  justify-content: flex-end;
+}
   h1, h2, h3, h4, h5, h6,
   .site-title {
     font-family: "Varela Round", sans-serif;
@@ -46,44 +93,30 @@ body {
   h2.search-title {
     text-transform: capitalize;
   }
-  
-  a {
-    color: #494329;
-    text-decoration: none;
-  }
-  main {
-    padding: 5vh;
-  }
-  pre {
-    background: #222;
-    padding: 10px;
-    border: 1px #777 solid;
-    color: #ededed;
-    font-family: monospace;
-    font-size: 1rem;
-  }
-  
-  video {
-    max-width: 100%;
-  }
-  
-  ul {
-    padding-left: 0;
-    margin-left: 20px;
-    list-style-position: outside;
-  }
-  
-  .site-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0 0 1rem 0;
-  }
   footer.site-footer {
     margin: 2rem auto 1rem;
     text-align: center;
     width: 80%;
     margin-bottom: 0;
     margin-top: 90vh;
+  }
+  .form-submit input#submit,
+  .button {
+    border: 1px #ccc solid;
+    border-radius: 3px;
+    background: #fff;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    display: inline-block;
+  }
+  
+  .form-submit input#submit:hover,
+  .button:hover {
+    cursor: pointer;
+    border-color: #777;
+  }
+  main {
+    padding: 5vh;
   }
   .main-navigation li{
     list-style-type: none;
@@ -97,13 +130,11 @@ body {
   .main-navigation li:hover>a {
     color: #000;
   }
-  
   .main-navigation li.current-menu-item>a,
   .main-navigation li.current-page-parent>a {
     font-weight: bold;
-    color: #494329;
+    color: #dab619;
   }
-  
   .main-navigation li ul {
     display: none
   }
@@ -125,114 +156,66 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    background-color: rgba(115, 115, 115, .9);
   }
-  
-  #content article,
-  #content article div,
-  #content img {
-    max-width: 100%;
+  nav a {
+    color: white;
   }
-  
-  #content img {
-    height: auto;
+  .next-posts,
+  .prev-posts,
+  .archive article.portfolio {
+    width: 45%;
+    float: left;
   }
-  
+  .next-posts {
+    text-align: right;
+    float: right;
+  }
+  pre {
+    background: #222;
+    padding: 10px;
+    border: 1px #777 solid;
+    color: #ededed;
+    font-family: monospace;
+    font-size: 1rem;
+  }
   #primary {
     width: 70%;
     float: left;
   }
-  
-  
   #primary.extended,
   #primary.excerpt,
   #primary.wordpress {
     width: 100%;
     float: none;
-  }
-  
-  article.post {
-    margin-bottom: 4rem;
-  }
-  
-  .author article.post {
-    margin-bottom: 2rem;
-  }
-  
-  .prev-posts,
-  .next-posts,
-  .archive article.portfolio {
-    width: 45%;
-    float: left;
-  }
-  
-  .next-posts {
-    text-align: right;
-    float: right;
-  }
-  
-  .archive article.portfolio:nth-child(even) {
-    margin-right: 5%;
-  }
-  
-  .form-submit input#submit,
-  .button {
-    border: 1px #ccc solid;
-    border-radius: 3px;
-    background: #fff;
-    padding: 1rem 2rem;
-    margin: 1rem 0;
-    display: inline-block;
-  }
-  
-  .form-submit input#submit:hover,
-  .button:hover {
-    cursor: pointer;
-    border-color: #777;
-  }
-  
- 
+  }  
   #secondary h2 {
     font-size: 1.2rem;
   }
-  
-  .byline {
-    color: #777;
-    font-size: .8rem;
+  .site-header {
+    background-color: rgba(115, 115, 115, .9);
+    padding: 1vh 1vh 10vh 10vh;
+    color: white;
+    margin: 0;
   }
-  
-  .byline a {
-    color: #777;
-    text-decoration: underline;
-    display: inline-block;
+  .site-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
   }
-  
-  .byline a:hover {
-    color: #564A71;
+  .splash {
+    padding: 25vh;
   }
-  
-  .author-bio {
-    border-bottom: 1px #ccc solid;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
+  video {
+    max-width: 100%;
   }
-  
-  .author-bio img {
-    float: left;
+  .widget-area {
+    list-style: none;
   }
-  /* flexing  */
- .flex-box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .flex-between {
-    justify-content: space-between;
-  }
-  .flex-end {
-    justify-content: flex-end;
-  }
-  .attachment-post-thumbnail {
-    border-radius: 10px;
+  ul {
+    padding-left: 0;
+    margin-left: 20px;
+    list-style-position: outside;
   }
   /*--------------------------------------------------------------
   # Default WP Classes
@@ -333,20 +316,10 @@ body {
       width: auto;
       z-index: 100000; /* Above WP toolbar. */
   }
-  .quote {
-    background-color: rgba(115, 115, 115, .9);
-    padding: 10vh;
-    color: white;
-    font-size: 3em;
-  }
-  .widget-area {
-    list-style: none;
-  }
-  /* Do not show the outline on the skip link target. */
-  #content[tabindex="-1"]:focus {
+    /* Do not show the outline on the skip link target. */
+    #content[tabindex="-1"]:focus {
       outline: 0;
   }
-  
 
   /* For mobile: */
 [class*="col-"] {
