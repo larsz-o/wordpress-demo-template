@@ -15,7 +15,8 @@
     function wphierarchy_enqueue_styles()
     {
         // change time() to version in production
-        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time(), 'all');
+        wp_enqueue_style( 'fonts-css', 'https://fonts.googleapis.com/css2?family=Archivo&family=Nova+Round&family=Varela+Round&display=swap',[], 0.1, 'all' );
+        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css'], time(), 'all');
     }
     add_action( 'wp_enqueue_scripts','wphierarchy_enqueue_styles' );
 
@@ -38,9 +39,9 @@
           'after-title' => '</h2>'
       ]);
       register_sidebar( [
-        'name'        => esc_html__('Footer Sidebar', 'wphierarchy'),
-        'id'          => 'footer-sidebar',
-        'description' => esc_html__('Add widgets for footer sidebar here', 'wphierarchy'),
+        'name'        => esc_html__('Header Sidebar', 'wphierarchy'),
+        'id'          => 'header-sidebar',
+        'description' => esc_html__('Add widgets for header sidebar here', 'wphierarchy'),
         'before-widget' => '<section class="widget">',
         'after-widget' => '</section>',
         'before-title' => '<h2 class="widget-title">',

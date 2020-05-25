@@ -18,14 +18,15 @@ a {
   color: #494329;
   text-decoration: none;
 }
-.archive article.portfolio:nth-child(even) {
-  margin-right: 5%;
-}
 article.post {
   margin-bottom: 4rem;
 }
 .attachment-post-thumbnail {
-  border-radius: 10px;
+  width: 100%;
+}
+audio {
+  width: 50vw;
+  filter: sepia(50%) drop-shadow(8px 8px 10px gray) invert(100%) saturate(3) contrast(70%);
 }
 .author article.post {
   margin-bottom: 2rem;
@@ -35,15 +36,9 @@ article.post {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
-
 .author-bio img {
   float: left;
 }
-body {
-    background-color: #ffffff;
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
-  }
 .byline {
     color: #777;
     font-size: .8rem;
@@ -56,6 +51,10 @@ body {
   .byline a:hover {
     color: #564A71;
   }
+  .call-to-action {
+    background-color: rgba(115, 115, 115, .7);
+    padding: 10px;
+  }
   #content article,
   #content article div,
   #content img {
@@ -65,7 +64,7 @@ body {
   #content img {
     height: auto;
   }
-    /* flexing  */
+  /* flexing  */
  .flex-box {
   display: flex;
   flex-direction: row;
@@ -74,8 +73,17 @@ body {
 .flex-between {
   justify-content: space-between;
 }
+.flex-column {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+}
 .flex-end {
   justify-content: flex-end;
+}
+.flex-evenly {
+  justify-content: space-evenly;
 }
   footer.site-footer {
     margin: 2rem auto 1rem;
@@ -99,20 +107,48 @@ body {
   }
   h1, h2, h3, h4, h5, h6,
   .site-title {
-    font-family: "Varela Round", sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    color: #3772FF;
   }
   h1 a {
     font-size: 2rem;
-    color: white;
+    color: #3772FF;
   }
-  
   h2 {
     margin:  2rem 0 1rem;
   }
-  
   h2.search-title {
     text-transform: capitalize;
   }
+  .hero {
+    position: relative;
+ }
+ .hero-overlay {
+   position: absolute;
+   text-transform: uppercase;
+   z-index: 0;
+   width: 100%;
+  }
+   .hero-title{
+     transform: translateY(10vw);
+     letter-spacing: 0.45rem;
+     font-weight: 700;
+   }
+   .hero-title-tight {
+    padding-left: 5vh;
+   }
+ .hero-image {
+   display: block;
+   overflow: visible;
+   z-index:-1;
+   margin-left: auto;
+  width: 50%;
+ }
+ html, body {
+font-family: 'Archivo', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+ }
   main {
     padding: 5vh;
   }
@@ -152,8 +188,7 @@ body {
     color: white;
   }
   .next-posts,
-  .prev-posts,
-  .archive article.portfolio {
+  .prev-posts {
     width: 45%;
     float: left;
   }
@@ -161,6 +196,7 @@ body {
     text-align: right;
     float: right;
   }
+  
   pre {
     background: #222;
     padding: 10px;
@@ -183,19 +219,16 @@ body {
     font-size: 1.2rem;
   }
   .site-header {
-    background-color: rgba(115, 115, 115, .9);
-    padding: 1vh 1vh 10vh 10vh;
-    color: white;
-    margin: 0;
+   /* background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%); */
+   background: white;
+   margin: 0;
   }
   .site-title {
     font-size: 2rem;
     font-weight: bold;
     margin: 0 0 1rem 0;
   }
-  .splash {
-    padding: 25vh;
-  }
+
   video {
     max-width: 100%;
   }
