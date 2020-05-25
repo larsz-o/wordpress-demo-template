@@ -190,10 +190,7 @@ body {
     border-color: #777;
   }
   
-  #secondary {
-    width: 25%;
-    float: right;
-  }
+ 
   #secondary h2 {
     font-size: 1.2rem;
   }
@@ -222,7 +219,6 @@ body {
   .author-bio img {
     float: left;
   }
-
   /* flexing  */
  .flex-box {
     display: flex;
@@ -232,7 +228,9 @@ body {
   .flex-between {
     justify-content: space-between;
   }
-
+  .flex-end {
+    justify-content: flex-end;
+  }
   .attachment-post-thumbnail {
     border-radius: 10px;
   }
