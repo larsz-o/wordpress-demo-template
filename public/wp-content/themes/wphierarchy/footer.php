@@ -2,7 +2,9 @@
 </div> <!-- ends .content -->
 <footer id="colophon" class="site-footer" role="contentinfo">
 <?php get_sidebar( 'footer' )?>
-    <p>Created by <a href="https://www.larsmackenzie.com">Lars Mackenzie Designs</a>
+<nav id="site-navigation" class="main-navigation" role="navigation">
+            <?php wp_nav_menu( [ 'theme_location' => 'main-menu'] );?>
+        </nav>
 </footer>
 </div> <!-- ends .page -->
 </body>

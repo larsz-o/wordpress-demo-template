@@ -7,9 +7,6 @@
 </head>
 <body <?php body_class();?>>
 <div id="page">
-<nav id="site-navigation" class="main-navigation" role="navigation">
-            <?php wp_nav_menu( [ 'theme_location' => 'main-menu'] );?>
-        </nav>
     <header id="masthead" class="site-header splash" role="banner">
         <a href="#content" class="skip-link screen-reader-text"><?php esc_html_e('Skip to content', 'wphierarchy');?></a>
         <div class="site-branding">

@@ -77,26 +77,8 @@ body {
 .flex-end {
   justify-content: flex-end;
 }
-  h1, h2, h3, h4, h5, h6,
-  .site-title {
-    font-family: "Varela Round", sans-serif;
-  }
-  h1 a {
-    font-size: 2rem;
-    color: white;
-  }
-  
-  h2 {
-    margin:  2rem 0 1rem;
-  }
-  
-  h2.search-title {
-    text-transform: capitalize;
-  }
   footer.site-footer {
     margin: 2rem auto 1rem;
-    text-align: center;
-    width: 80%;
     margin-bottom: 0;
     margin-top: 90vh;
   }
@@ -115,18 +97,30 @@ body {
     cursor: pointer;
     border-color: #777;
   }
+  h1, h2, h3, h4, h5, h6,
+  .site-title {
+    font-family: "Varela Round", sans-serif;
+  }
+  h1 a {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  h2 {
+    margin:  2rem 0 1rem;
+  }
+  
+  h2.search-title {
+    text-transform: capitalize;
+  }
   main {
     padding: 5vh;
   }
   .main-navigation li{
     list-style-type: none;
-    display: inline-block;
+    line-height: 1.3rem;
   }
-  
-  .main-navigation li a {
-    padding: 5px;
-  }
-  
+
   .main-navigation li:hover>a {
     color: #000;
   }
@@ -135,10 +129,6 @@ body {
     font-weight: bold;
     color: #dab619;
   }
-  .main-navigation li ul {
-    display: none
-  }
-  
   .main-navigation li:hover ul {
     display: block;
     position: absolute;
@@ -147,7 +137,7 @@ body {
     background: #fff091;
     padding: 5px 10px;
   }
-  
+
   .main-navigation li:hover ul li {
     display: block;
     margin: .5rem 0;
@@ -155,10 +145,10 @@ body {
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     background-color: rgba(115, 115, 115, .9);
+    padding: 5vh;
   }
-  nav a {
+  nav li a {
     color: white;
   }
   .next-posts,

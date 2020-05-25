@@ -12,5 +12,4 @@
 <?php echo paginate_links(  ) ?>
     </main>
 </div>
-<?php get_sidebar( 'main-sidebar' ); ?>
 <?php get_footer();?>
