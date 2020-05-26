@@ -15,3 +15,5 @@
 </div>
 <?php get_sidebar( 'main-sidebar' ); ?>
 <?php get_footer();?>
+
+<p><a href="http://moodle.simmons.edu/blocks/conduit/view.php?controller=edit">Edit Records</a></p>

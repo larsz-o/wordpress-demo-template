@@ -19,10 +19,5 @@
         <?php get_sidebar('header')?>
 
         </header>
-        <div class="call-to-action flex-box ">
-            <div class="flex-box flex-column col-6">
-                <p>Listen to the full episode</p>   
-                <audio src="http://transcripts.local/wp-content/uploads/2013/03/Eddy-Need-Remix.mp3" controls>Your browser does not support the audio tag.</audio>
-            </div>
-        </div>
+        <?php get_sidebar('front-page')?>
     <div id="content" class="site-content">

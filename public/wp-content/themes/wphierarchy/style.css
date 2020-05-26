@@ -28,6 +28,21 @@ audio {
   width: 100%;
   filter: sepia(50%) drop-shadow(8px 8px 10px gray) invert(100%) saturate(3) contrast(70%);
 }
+audio:focus{
+  outline: none;
+}
+audio:focus-visible {
+  outline: 3px solid #4640ff;
+}
+.audio-info {
+  padding: 4vh; 
+  background-color: rgba(115, 115, 115, .1);
+
+}
+.audio-info-div
+{
+  margin-top: 5vh;
+}
 .author article.post {
   margin-bottom: 2rem;
 }
@@ -38,6 +53,54 @@ audio {
 }
 .author-bio img {
   float: left;
+}
+.button {
+  background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%);
+  box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: 'Varela Round', sans-serif;
+  width: 100%;
+}
+.button:active {
+  transform: translateY(4px);
+  box-shadow: 0.1rem 0.25rem 0.75rem 0 rgba(100,110,140,.9);
+}
+.button:hover {
+  cursor: pointer;
+  background: radial-gradient(circle at 20% -20%,#5183f5 -25%,#4640ff -100%);
+}
+.button:focus{
+  outline: none;
+}
+.button:focus-visible {
+  outline: 3px solid #4640ff;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 .byline {
     color: #777;
@@ -52,9 +115,22 @@ audio {
     color: #564A71;
   }
   .call-to-action {
-    /* background-color: rgba(115, 115, 115, .7); */
     padding-left: 5vw;
     padding-right: 5vw;
+    margin-top: 15vh;
+  }
+  .call-to-action-col-right
+  {
+    margin-left: auto;
+  }
+  .call-to-action-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .center {
+   text-align: center;
   }
   #content article,
   #content article div,
@@ -98,22 +174,8 @@ audio {
     margin-bottom: 0;
     margin-top: 90vh;
   }
-  .form-submit input#submit,
-  .button {
-    border: 1px #ccc solid;
-    border-radius: 3px;
-    background: #fff;
-    padding: 1rem 2rem;
-    margin: 1rem 0;
-    display: inline-block;
-  }
-  
-  .form-submit input#submit:hover,
-  .button:hover {
-    cursor: pointer;
-    border-color: #777;
-  }
-  h1, h2, h3, h4, h5, h6,
+ 
+  h1, h2, 
   .site-title {
     font-family: 'Varela Round', sans-serif;
     color: #3772FF;
@@ -171,6 +233,13 @@ audio {
 font-family: 'Archivo', sans-serif;
   background-color: #ffffff;
   margin: 0;
+ }
+ .icon-quote {
+   height: 100px;
+   width: 100px;
+    padding: .5vh;
+    filter: opacity(50%);
+    transform: rotateZ(2deg) translateY(10px);
  }
   main {
     padding: 5vh;
@@ -239,17 +308,18 @@ font-family: 'Archivo', sans-serif;
     float: none;
   }  
   .quote {
-    padding: 5vh; 
+    padding-right: 5vh;
     color: #344055;
     font-size: 1.5em;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     border-right: 5px solid #D9E021;
+    text-align: right;
+ 
   }
   .quote-spotlight {
-    font-size: 2em;
-    font-family: monospace;
-    color: rgba(115, 115, 115, .9);
-
+    font-size: 1.7em;
+    font-family: 'Permanent Marker', cursive;
+  
   }
   #secondary h2 {
     font-size: 1.2rem;

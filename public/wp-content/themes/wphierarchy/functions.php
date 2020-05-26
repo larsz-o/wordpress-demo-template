@@ -15,8 +15,10 @@
     function wphierarchy_enqueue_styles()
     {
         // change time() to version in production
-        wp_enqueue_style( 'fonts-css', 'https://fonts.googleapis.com/css2?family=Archivo&family=Archivo+Black&family=Archivo+Narrow&family=Francois+One&family=Mansalva&family=Permanent+Marker&family=Sigmar+One&family=Varela+Round',[], time(), 'all' );
-        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css'], time(), 'all');
+        wp_enqueue_style( 'fonts-css', 'https://fonts.googleapis.com/css2?family=Archivo&family=Varela+Round',[], time(), 'all' );
+        wp_enqueue_style( 'more-fonts-css', 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap',[], time(), 'all' );
+        wp_enqueue_style( 'font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',[], time(), 'all' );
+        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css', 'more-fonts-css', 'font-awesome'], time(), 'all');
     }
     add_action( 'wp_enqueue_scripts','wphierarchy_enqueue_styles' );
 
@@ -48,7 +50,7 @@
         'after-title' => '</h2>'
     ]);
     register_sidebar( [
-        'name'        => esc_html__('Front Page Widget Area', 'wphierarchy'),
+        'name'        => esc_html__('Front Page Audio', 'wphierarchy'),
         'id'          => 'front-page',
         'description' => esc_html__('Add widgets for front page here', 'wphierarchy'),
         'before-widget' => '<section class="widget">',
