@@ -25,9 +25,9 @@ article.post {
   width: 100%;
 }
 audio {
-  /* width: 100%;
-  filter: sepia(50%) invert(100%) saturate(2) contrast(70%);
-  margin-top: 0; */
+  width: 100%;
+  background:white;
+  margin-top: 0;
 }
 
 audio:focus{
@@ -40,18 +40,7 @@ audio:focus-visible {
   padding: 4vh; 
   background-color: rgba(115, 115, 115, .1);
 }
-#play-button{
-  height: 50px;
-  width: 50px;
-}
-img {
-  height: 50px;
-  width: 50px;
-}
-.audio-info-div
-{
-  margin-top: 5vh;
-}
+
 .author article.post {
   margin-bottom: 2rem;
 }
@@ -71,7 +60,6 @@ img {
   border-radius: 10px;
   font-size: 1.1rem;
   font-family: 'Varela Round', sans-serif;
-  width: 100%;
 }
 .button:active {
   transform: translateY(4px);
@@ -90,10 +78,8 @@ img {
 .button span {
   cursor: pointer;
   display: inline-block;
-  /* position: relative; */
   transition: 0.5s;
 }
-
 .button span:after {
   content: '\00bb';
   position: relative;
@@ -102,15 +88,21 @@ img {
   right: -20px;
   transition: 0.5s;
 }
-
 .button:hover span {
   padding-right: 20px;
   padding-left: 5px;
 }
-
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+.button-donate {
+  background: black;
+  border-radius: 3px;
+  color: white;
+}
+.button-donate:hover {
+  background: black;
 }
 .byline {
     color: #777;
@@ -173,6 +165,9 @@ img {
 .flex-evenly {
   justify-content: space-evenly;
 }
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
 .front-section {
   margin-top: 5vh;
   padding-top: 5vw;
@@ -233,6 +228,7 @@ font-family: 'Archivo', sans-serif;
   background-color: #ffffff;
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
  }
  .icon-quote {
    height: 100px;
@@ -271,7 +267,7 @@ font-family: 'Archivo', sans-serif;
     margin: .5rem 0;
   }
   #masthead {
-    background-color:white;
+    background-color:#fff;
     padding: 10px 16px;
     box-shadow: 0 1px 5px rgba(0,0,0,.2);
     z-index: 1000;
@@ -474,6 +470,19 @@ font-family: 'Archivo', sans-serif;
   /* For mobile: */
 [class*="col-"] {
   width: 100%;
+}
+@media only screen and (max-width: 600px){
+  .hero-image {
+    display: block;
+    z-index:-1;
+    min-width: 100vw;
+   overflow: hidden;
+    height: 100vh;
+    background: url("https://tohp-transcripts.s3.amazonaws.com/banner.png");
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: top center;
+  }
 }
 @media only screen and (min-width: 600px) {
   /* For tablets: */
