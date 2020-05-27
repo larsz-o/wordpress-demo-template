@@ -17,11 +17,17 @@
         // change time() to version in production
         wp_enqueue_style( 'fonts-css', 'https://fonts.googleapis.com/css2?family=Archivo&family=Varela+Round',[], time(), 'all' );
         wp_enqueue_style( 'more-fonts-css', 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap',[], time(), 'all' );
-        wp_enqueue_style( 'font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',[], time(), 'all' );
-        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css', 'more-fonts-css', 'font-awesome'], time(), 'all');
+        wp_enqueue_style( 'plyr-css', get_stylesheet_directory_uri() . '/plyr.css',[], time(), 'all' );
+        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css', 'more-fonts-css', 'plyr-css'], time(), 'all');
     }
     add_action( 'wp_enqueue_scripts','wphierarchy_enqueue_styles' );
-
+     //load in js
+     function wphierarchy_enqueue_scripts()
+     {
+        wp_enqueue_script( 'plyr', 'https://cdn.plyr.io/3.6.2/plyr.js', [], time(), true);
+        wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri() . '/assets/scripts.js', ['plyr'], time(), true);
+     }
+     add_action( 'wp_enqueue_scripts','wphierarchy_enqueue_scripts' );
     //register menu locations
     register_nav_menus( [
         'main-menu' => esc_html__('Main Menu', 'wphierachy'),

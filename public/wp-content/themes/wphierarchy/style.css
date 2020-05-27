@@ -25,9 +25,11 @@ article.post {
   width: 100%;
 }
 audio {
-  width: 100%;
-  filter: sepia(50%) drop-shadow(8px 8px 10px gray) invert(100%) saturate(3) contrast(70%);
+  /* width: 100%;
+  filter: sepia(50%) invert(100%) saturate(2) contrast(70%);
+  margin-top: 0; */
 }
+
 audio:focus{
   outline: none;
 }
@@ -37,7 +39,14 @@ audio:focus-visible {
 .audio-info {
   padding: 4vh; 
   background-color: rgba(115, 115, 115, .1);
-
+}
+#play-button{
+  height: 50px;
+  width: 50px;
+}
+img {
+  height: 50px;
+  width: 50px;
 }
 .audio-info-div
 {
@@ -81,13 +90,13 @@ audio:focus-visible {
 .button span {
   cursor: pointer;
   display: inline-block;
-  position: relative;
+  /* position: relative; */
   transition: 0.5s;
 }
 
 .button span:after {
   content: '\00bb';
-  position: absolute;
+  position: relative;
   opacity: 0;
   top: 0;
   right: -20px;
@@ -95,7 +104,8 @@ audio:focus-visible {
 }
 
 .button:hover span {
-  padding-right: 25px;
+  padding-right: 20px;
+  padding-left: 5px;
 }
 
 .button:hover span:after {
@@ -127,6 +137,7 @@ audio:focus-visible {
     font-family: 'Permanent Marker', cursive;
     font-size: 2rem;
     margin: 0;
+    padding: 5px;
   }
 
   .center {
@@ -182,7 +193,7 @@ audio:focus-visible {
   }
   h1 a {
     font-size: 2rem;
-    color: #3772FF;
+    color: black;
   }
   h2 {
     margin:  2rem 0 1rem;
@@ -194,45 +205,31 @@ audio:focus-visible {
     position: relative;
  }
  .hero-overlay {
+  margin-left: 5vw;
    position: absolute;
    text-transform: uppercase;
    z-index: 0;
-   width: 100%;
-  }
-   .hero-title{
-     transform: translateY(10vw);
+   width: 100%;}
+   .hero-title {
+     font-size: 6vw;
+     transform: translateY(50vh);
+     color: #ffffff; 
      letter-spacing: 0.45rem;
      font-weight: 700;
    }
-   .hero-title-tight {
-    padding-left: 5vh;
-   }
  .hero-image {
    display: block;
-   overflow: visible;
    z-index:-1;
-  margin-left: auto;
-  width: 50%;
-    
+   min-width: 100vw;
+  overflow: scroll;
+   height: 100vh;
  }
- .hero-image-caption {
-  bottom: 100px;
-  color: #111;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 12px;
-  font-size: 1.2rem;
-  letter-spacing: 0.1em;
-  line-height: 1.5;
-  position: absolute;
-  right: 15px;
-  transform: rotateZ(-90deg) translateX(100%);
-  transform-origin: right bottom;
-  text-transform: uppercase;
- }
+
  html, body {
 font-family: 'Archivo', sans-serif;
   background-color: #ffffff;
   margin: 0;
+  width: 100%;
  }
  .icon-quote {
    height: 100px;
@@ -258,7 +255,7 @@ font-family: 'Archivo', sans-serif;
     color: #dab619;
   }
   .main-navigation li:hover ul {
-    display: block;
+    display: inline-block;
     position: absolute;
     margin-left: -10px;
     z-index: 100;
@@ -267,8 +264,14 @@ font-family: 'Archivo', sans-serif;
   }
 
   .main-navigation li:hover ul li {
-    display: block;
+    display: inline-block;
     margin: .5rem 0;
+  }
+  #masthead {
+    background-color:white;
+    padding: 10px 16px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    z-index: 1000;
   }
   nav {
     display: flex;
@@ -307,19 +310,23 @@ font-family: 'Archivo', sans-serif;
     width: 100%;
     float: none;
   }  
-  .quote {
+  .section{
     padding-right: 5vh;
     color: #344055;
     font-size: 1.5em;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    border-right: 5px solid #D9E021;
     text-align: right;
- 
+    margin: 10vh 0 10vh 0;
+  }
+  .quote-image {
+    border-radius: 50%;
+  }
+  .quote-right {
+    border-right: 5px solid #D9E021;
   }
   .quote-spotlight {
     font-size: 1.7em;
     font-family: 'Permanent Marker', cursive;
-  
   }
   #secondary h2 {
     font-size: 1.2rem;
@@ -334,6 +341,17 @@ font-family: 'Archivo', sans-serif;
     font-weight: bold;
     margin: 0 0 1rem 0;
   }
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + #content {
+  padding-top: 102px;
+}
 
   video {
     max-width: 100%;
@@ -484,3 +502,6 @@ font-family: 'Archivo', sans-serif;
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 }
+/* audio  */
+
+

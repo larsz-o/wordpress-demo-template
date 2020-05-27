@@ -4,6 +4,6 @@
         return;
     }
 ?>
-<aside class="widget-area" role="complimentary" id="secondary">
+<aside class="widget-area col-10" role="complimentary" id="secondary">
     <?php dynamic_sidebar( 'header-sidebar' );?>
 </aside>
