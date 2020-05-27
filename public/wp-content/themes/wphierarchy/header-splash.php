@@ -20,7 +20,7 @@
                 </a>
             </h1> 
         </div>
-     <img src="https://tohp-transcripts.s3.amazonaws.com/banner.png" alt="banner" class="hero-image">
+     <div alt="banner" class="hero-image"></div>
 </div>
         </header>
       

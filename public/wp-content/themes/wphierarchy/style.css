@@ -193,7 +193,7 @@ img {
   }
   h1 a {
     font-size: 2rem;
-    color: black;
+    color: #ffffff; 
   }
   h2 {
     margin:  2rem 0 1rem;
@@ -213,7 +213,6 @@ img {
    .hero-title {
      font-size: 6vw;
      transform: translateY(50vh);
-     color: #ffffff; 
      letter-spacing: 0.45rem;
      font-weight: 700;
    }
@@ -221,8 +220,12 @@ img {
    display: block;
    z-index:-1;
    min-width: 100vw;
-  overflow: scroll;
+  overflow: hidden;
    height: 100vh;
+   background: url("https://tohp-transcripts.s3.amazonaws.com/banner.png");
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
  }
 
  html, body {
