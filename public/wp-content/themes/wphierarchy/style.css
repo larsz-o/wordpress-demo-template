@@ -217,6 +217,7 @@ audio:focus-visible {
    min-width: 100vw;
   overflow: hidden;
    height: 100vh;
+   background-color: black;
    background: url("https://tohp-transcripts.s3.amazonaws.com/banner.png");
    background-repeat: no-repeat;
   background-attachment: fixed;
