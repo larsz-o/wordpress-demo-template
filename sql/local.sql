@@ -318,7 +318,7 @@ INSERT INTO `wp_options` VALUES (181,'_site_transient_update_core','O:8:\"stdCla
 INSERT INTO `wp_options` VALUES (339,'_site_transient_timeout_theme_roots','1590614643','no');
 INSERT INTO `wp_options` VALUES (340,'_site_transient_theme_roots','a:11:{s:21:\"1.02-phpforwp-starter\";s:7:\"/themes\";s:21:\"1.04-phpforwp-starter\";s:7:\"/themes\";s:21:\"1.08-phpforwp-starter\";s:7:\"/themes\";s:21:\"1.10-phpforwp-starter\";s:7:\"/themes\";s:21:\"1.12-phpforwp-starter\";s:7:\"/themes\";s:21:\"1.14-phpforwp-starter\";s:7:\"/themes\";s:17:\"transcripts-clean\";s:7:\"/themes\";s:14:\"twentynineteen\";s:7:\"/themes\";s:15:\"twentyseventeen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";s:11:\"wphierarchy\";s:7:\"/themes\";}','no');
 INSERT INTO `wp_options` VALUES (188,'ai1wm_updater','a:0:{}','yes');
-INSERT INTO `wp_options` VALUES (212,'_transient_doing_cron','1590613053.5693390369415283203125','yes');
+INSERT INTO `wp_options` VALUES (212,'_transient_doing_cron','1590776364.8916909694671630859375','yes');
 INSERT INTO `wp_options` VALUES (190,'_site_transient_timeout_browser_803ecde3d6ae279d397e824cbe224ba2','1590947196','no');
 INSERT INTO `wp_options` VALUES (191,'_site_transient_browser_803ecde3d6ae279d397e824cbe224ba2','a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"81.0.4044.138\";s:8:\"platform\";s:9:\"Macintosh\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}','no');
 INSERT INTO `wp_options` VALUES (192,'_site_transient_timeout_php_check_472f71d2a071d463a95f84346288dc89','1590947196','no');
@@ -2234,4 +2234,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-27 16:59:34
+-- Dump completed on 2020-05-31 12:17:27

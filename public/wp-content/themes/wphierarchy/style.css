@@ -40,7 +40,17 @@ audio:focus-visible {
   padding: 4vh; 
   background-color: rgba(115, 115, 115, .1);
 }
-
+.audio-hero-div {
+ margin-top: 25vh;
+  background-color: 	#f8f8f5;
+}
+.audio-hero-info-text {
+  margin: 10vh;
+}
+.audio-hero-image {
+  height: 450px;
+  width: 337px;
+}
 .author article.post {
   margin-bottom: 2rem;
 }
@@ -52,6 +62,13 @@ audio:focus-visible {
 .author-bio img {
   float: left;
 }
+.banner-header {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
 .button {
   background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%);
   box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
@@ -60,6 +77,7 @@ audio:focus-visible {
   border-radius: 10px;
   font-size: 1.1rem;
   font-family: 'Varela Round', sans-serif;
+  border: 0;
 }
 .button:active {
   transform: translateY(4px);
@@ -97,12 +115,36 @@ audio:focus-visible {
   right: 0;
 }
 .button-donate {
-  background: black;
-  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Varela Round', sans-serif;
+  background-color: black;
+  border: 0 solid transparent;
+  border-radius: 10px;
   color: white;
+  box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
 }
-.button-donate:hover {
-  background: black;
+.button-donate > p {
+  margin: 15px;
+  padding: 1px;
+}
+.button-donate:focus{
+  outline: none;
+}
+.button-donate:focus-visible {
+  outline: 3px solid black;
+}
+.button-donate:active{
+  transform: translateY(4px);
+  box-shadow: 0.1rem 0.25rem 0.75rem 0 rgba(100,110,140,.9);
+}
+.button-subscribe { 
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.button-subscribe > img {
+  max-height: 25px;
 }
 .byline {
     color: #777;
@@ -161,12 +203,19 @@ audio:focus-visible {
 }
 .flex-end {
   justify-content: flex-end;
+  align-items: flex-end;
 }
 .flex-evenly {
   justify-content: space-evenly;
 }
 .flex-no-wrap {
   flex-wrap: nowrap;
+}
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+.front-page-footer {
+  margin-bottom: 0;
 }
 .front-section {
   margin-top: 5vh;
@@ -178,13 +227,12 @@ audio:focus-visible {
   footer.site-footer {
     margin: 2rem auto 1rem;
     margin-bottom: 0;
-    margin-top: 90vh;
+    margin-top: 40vh;
   }
  
-  h1, h2, 
+  h1, h2, h3,
   .site-title {
-    font-family: 'Varela Round', sans-serif;
-    color: #3772FF;
+    font-family: 'Varela Round', sans-serif; 
   }
   h1 a {
     font-size: 2rem;
@@ -230,6 +278,16 @@ font-family: 'Archivo', sans-serif;
   margin: 0;
   width: 100%;
   overflow-x: hidden;
+ }
+ .icon {
+   padding: 5px;
+   margin: 10px;
+   cursor: pointer;
+ }
+ .icon-person {
+   border-radius: 50%;
+   height: 75px !important;
+   width: 75px !important;
  }
  .icon-quote {
    height: 100px;
@@ -328,8 +386,8 @@ font-family: 'Archivo', sans-serif;
     font-size: 1.7em;
     font-family: 'Permanent Marker', cursive;
   }
-  #secondary h2 {
-    font-size: 1.2rem;
+  .right {
+    text-align: right;
   }
   .site-header {
    /* background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%); */

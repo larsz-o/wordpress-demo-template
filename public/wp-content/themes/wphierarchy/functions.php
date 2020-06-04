@@ -91,6 +91,24 @@
         'before-title' => '<h2 class="widget-title">',
         'after-title' => '</h2>'
     ]);
+    register_sidebar( [
+        'name'        => esc_html__('Front Page Section Footer', 'wphierarchy'),
+        'id'          => 'front-page-section-footer',
+        'description' => esc_html__('Add widgets for front page section Footer here', 'wphierarchy'),
+        'before-widget' => '<section class="widget">',
+        'after-widget' => '</section>',
+        'before-title' => '<h2 class="widget-title">',
+        'after-title' => '</h2>'
+    ]);
+    register_sidebar([
+        'name'          => esc_html__('Audio Info Hero', 'wphierarchy'),
+        'id'            => 'audio-info-hero',
+        'description'   => esc_html__('Add widgets for Audio Info Hero here', 'wphierarchy'),
+        'before-widget' => '<section class="widget">',
+        'after-widget'  => '</section>',
+        'before-title'  => '<h2 class="widget-title">',
+        'after-title'   =>  '</h2>'
+    ]);
     }
     add_action( 'widgets_init', 'wphierarchy_widgets_init');
     ?>
