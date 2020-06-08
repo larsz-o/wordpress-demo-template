@@ -13,3 +13,6 @@
 <aside class="widget-area front-section" role="complimentary" id="secondary">
     <?php dynamic_sidebar( 'front-page-section-3' );?>
 </aside>
+<aside class="widget-area front-section" role="complimentary" id="secondary">
+    <?php dynamic_sidebar( 'front-page-section-4' );?>
+</aside>

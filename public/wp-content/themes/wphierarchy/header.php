@@ -7,15 +7,23 @@
 </head>
 <body <?php body_class();?>>
 <div id="page">
-    <header id="masthead" class="site-header" role="banner">
+    <header class="site-header" role="banner">
         <a href="#content" class="skip-link screen-reader-text"><?php esc_html_e('Skip to content', 'wphierarchy');?></a>
-        <div class="site-branding">
-            <h1 class="site-title">
-                <a href="<?php echo esc_url(home_url('/'));?>" rel="home">
+        <div class="header">
+        <!-- <?php get_sidebar('front-page')?> -->
+        </div>
+        <div class="hero col-12">
+            <div class="hero-overlay">
+            <h1 class="hero-title hero-title-small">
+                <a href="<?php echo esc_url(home_url('/'));?>" rel="home" class="hero-title-tight">
                      <?php bloginfo( 'name' );?>
                 </a>
-            </h1>
+            </h1> 
         </div>
-    </header>
-    <div id="content" class="site-content">
+     <div alt="banner" class="hero-image hero-small"></div>
+</div>
+        </header>
+      
+   
+    <div id="content" class="content">
     

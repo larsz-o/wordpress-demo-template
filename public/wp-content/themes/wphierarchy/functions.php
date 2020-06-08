@@ -15,10 +15,10 @@
     function wphierarchy_enqueue_styles()
     {
         // change time() to version in production
-        wp_enqueue_style( 'fonts-css', 'https://fonts.googleapis.com/css2?family=Archivo&family=Varela+Round',[], time(), 'all' );
+        wp_enqueue_style( 'fonts-css', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Varela+Round',[], time(), 'all' );
         wp_enqueue_style( 'more-fonts-css', 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap',[], time(), 'all' );
-        wp_enqueue_style( 'plyr-css', get_stylesheet_directory_uri() . '/plyr.css',[], time(), 'all' );
-        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css', 'more-fonts-css', 'plyr-css'], time(), 'all');
+    
+        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css', 'more-fonts-css'], time(), 'all');
     }
     add_action( 'wp_enqueue_scripts','wphierarchy_enqueue_styles' );
      //load in js
@@ -77,6 +77,15 @@
         'name'        => esc_html__('Front Page Section 2', 'wphierarchy'),
         'id'          => 'front-page-section-2',
         'description' => esc_html__('Add widgets for front page section 2 here', 'wphierarchy'),
+        'before-widget' => '<section class="widget">',
+        'after-widget' => '</section>',
+        'before-title' => '<h2 class="widget-title">',
+        'after-title' => '</h2>'
+    ]);
+    register_sidebar( [
+        'name'        => esc_html__('Front Page Section 3', 'wphierarchy'),
+        'id'          => 'front-page-section-3',
+        'description' => esc_html__('Add widgets for front page section 3 here', 'wphierarchy'),
         'before-widget' => '<section class="widget">',
         'after-widget' => '</section>',
         'before-title' => '<h2 class="widget-title">',

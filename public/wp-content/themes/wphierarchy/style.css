@@ -15,8 +15,11 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 a {
-  color: #494329;
+  color: #4640ff;
   text-decoration: none;
+}
+.align-items-center {
+  align-items: baseline;
 }
 article.post {
   margin-bottom: 4rem;
@@ -37,19 +40,19 @@ audio:focus-visible {
   outline: 3px solid #4640ff;
 }
 .audio-info {
-  padding: 4vh; 
   background-color: rgba(115, 115, 115, .1);
 }
 .audio-hero-div {
- margin-top: 25vh;
+  margin-top: 25vh;
   background-color: 	#f8f8f5;
+  border-radius: 2px;
 }
 .audio-hero-info-text {
-  margin: 10vh;
+  padding: 3vh;
 }
 .audio-hero-image {
   height: 450px;
-  width: 337px;
+  width: auto;
 }
 .author article.post {
   margin-bottom: 2rem;
@@ -64,11 +67,12 @@ audio:focus-visible {
 }
 .banner-header {
   padding: 1rem;
-  background-color: black;
-  color: white;
+
   margin-left: 1rem;
   margin-bottom: 2rem;
+  border-radius: 5px;
 }
+
 .button {
   background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%);
   box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
@@ -122,10 +126,9 @@ audio:focus-visible {
   border-radius: 10px;
   color: white;
   box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
-}
-.button-donate > p {
-  margin: 15px;
-  padding: 1px;
+  padding: 15px;
+  align-self: center;
+  font-size: 1.1em;
 }
 .button-donate:focus{
   outline: none;
@@ -140,7 +143,6 @@ audio:focus-visible {
 .button-subscribe { 
   background-color: transparent;
   border: 0 solid transparent;
-  padding: 5px;
   cursor: pointer;
 }
 .button-subscribe > img {
@@ -182,9 +184,9 @@ audio:focus-visible {
   #content img {
     max-width: 100%;
   }
-  
-  #content img {
-    height: auto;
+  .color-block {
+    background-color: #E9F1F7;
+    padding: 5vh;
   }
   /* flexing  */
  .flex-box {
@@ -271,9 +273,18 @@ audio:focus-visible {
   background-attachment: fixed;
   background-position: center;
  }
-
+ .hero-small{
+   height: 25vh;
+   background-position: bottom left;
+ }
+ .hero-title-small {
+   transform: translateY(0vh);
+ }
+.hero-title-small > a {
+  color: black;
+}
  html, body {
-font-family: 'Archivo', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
   background-color: #ffffff;
   margin: 0;
   width: 100%;
@@ -288,6 +299,17 @@ font-family: 'Archivo', sans-serif;
    border-radius: 50%;
    height: 75px !important;
    width: 75px !important;
+ }
+ .icon-person:hover {
+   cursor: pointer;
+    transform: translateY(-10px);
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: 2px 4px 6px rgba(115, 115, 115, 1);
+ }
+ .icon-person-link:active{
+  transform: translateY(22px);
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
  }
  .icon-quote {
    height: 100px;
@@ -349,7 +371,11 @@ font-family: 'Archivo', sans-serif;
     text-align: right;
     float: right;
   }
-  
+ 
+  .person-caption {
+   text-align: center;
+  }
+ 
   pre {
     background: #222;
     padding: 10px;
@@ -541,6 +567,14 @@ font-family: 'Archivo', sans-serif;
     background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: top center;
+  }
+  .hero-small{
+    height: 25vh;
+    background-position: bottom center;
+  }
+  .hero-title-small > a {
+    color: white;
+    transform: translateY(5vh);
   }
 }
 @media only screen and (min-width: 600px) {
