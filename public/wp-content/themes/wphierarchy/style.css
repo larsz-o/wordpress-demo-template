@@ -1,19 +1,4 @@
-/*
-Theme Name: WP Hierarchy
-Author: Lars Mackenzie
-Author URI: https://www.larsmackenzie.com
-Description: Demo theme for learning WordPress template hierarchy
-Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
-Version: 0.1
-Requires at least: 5.0
-Tested up to: 5.4
-Requires PHP: 7.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: wphierarchy
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
+
 a {
   color: #4640ff;
   text-decoration: none;
@@ -29,7 +14,6 @@ article.post {
 }
 audio {
   width: 100%;
-  background:white;
   margin-top: 0;
 }
 
@@ -42,17 +26,27 @@ audio:focus-visible {
 .audio-info {
   background-color: rgba(115, 115, 115, .1);
 }
+.audio-hero-container {
+  padding: 5vw;
+  background-color: whitesmoke;
+}
 .audio-hero-div {
-  margin-top: 25vh;
-  background-color: 	#f8f8f5;
-  border-radius: 2px;
+  margin: 25vh;
+
+  border-radius: 10px;
 }
 .audio-hero-info-text {
   padding: 3vh;
 }
 .audio-hero-image {
-  height: 450px;
+  max-height: 450px;
   width: auto;
+  border-radius: 10px;
+}
+.audio-hero-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.2em;
+  text-align: center;
 }
 .author article.post {
   margin-bottom: 2rem;
@@ -67,14 +61,13 @@ audio:focus-visible {
 }
 .banner-header {
   padding: 1rem;
-
   margin-left: 1rem;
   margin-bottom: 2rem;
   border-radius: 5px;
 }
 
 .button {
-  background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%);
+  background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%) !important;
   box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
   color: white;
   padding: 10px;
@@ -184,9 +177,20 @@ audio:focus-visible {
   #content img {
     max-width: 100%;
   }
-  .color-block {
-    background-color: #E9F1F7;
-    padding: 5vh;
+  .color-block-1 {
+   background: url('http://transcripts.local/wp-content/uploads/2020/06/lucas-gallone-PVw_vtpCGaM-unsplash-scaled.jpg');
+   background-repeat: no-repeat ;
+   background-size: cover;
+   padding: 10vh;
+  }
+  .color-block-2 {
+    background: url('http://transcripts.local/wp-content/uploads/2020/06/sarah-ardin-mD9K4NiSqrM-unsplash-scaled.jpg');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    padding: 10vh;
+  }
+  .flex-baseline {
+    align-items: baseline;
   }
   /* flexing  */
  .flex-box {
@@ -216,20 +220,26 @@ audio:focus-visible {
 .flex-reverse {
   flex-direction: row-reverse;
 }
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
 .front-page-footer {
   margin-bottom: 0;
+  margin-top: 10px;
 }
 .front-section {
-  margin-top: 5vh;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
   padding-top: 5vw;
 }
-.top-section {
-  margin-top: 25vh;
-}
-  footer.site-footer {
-    margin: 2rem auto 1rem;
-    margin-bottom: 0;
-    margin-top: 40vh;
+footer.site-footer {
+  margin: 2rem auto 1rem;
+  margin-bottom: 0;
+  margin-top: 40vh;
   }
  
   h1, h2, h3,
@@ -297,8 +307,8 @@ font-family: 'Source Sans Pro', sans-serif;
  }
  .icon-person {
    border-radius: 50%;
-   height: 75px !important;
-   width: 75px !important;
+   height: 125px !important;
+   width: 125px !important;
  }
  .icon-person:hover {
    cursor: pointer;
@@ -318,9 +328,31 @@ font-family: 'Source Sans Pro', sans-serif;
     filter: opacity(50%);
     transform: rotateZ(2deg) translateY(10px);
  }
-  main {
-    padding: 5vh;
-  }
+ .info-card{
+  position: relative;
+  margin-top: 5vh;
+}
+.info-overlay {
+margin-left: 5vw;
+ position: absolute;
+ text-transform: uppercase;
+ z-index: 1000;
+ width: 100%;
+}
+ .info-title {
+   font-size: 2vw;
+   transform: translateY(4rem) translateX(0.3rem);
+   letter-spacing: 0.45rem;
+   font-weight: 700;
+   border-radius: 10px;
+ }
+.info-image {
+ display: block;
+ z-index:-1;
+}
+ /* .info-card-shapes {
+    transform: skew(1deg, 5deg)
+ } */
   .main-navigation li{
     list-style-type: none;
     line-height: 1.3rem;
@@ -372,10 +404,17 @@ font-family: 'Source Sans Pro', sans-serif;
     float: right;
   }
  
-  .person-caption {
-   text-align: center;
-  }
+ .person-caption {
+
+text-align: center;
+padding: 10px;
+ }
+.person-caption > a {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #2E294E;
  
+}
   pre {
     background: #222;
     padding: 10px;
@@ -395,21 +434,25 @@ font-family: 'Source Sans Pro', sans-serif;
     float: none;
   }  
   .section{
-    padding-right: 5vh;
     color: #344055;
     font-size: 1.5em;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    text-align: right;
-    margin: 10vh 0 10vh 0;
+  }
+  .subtext {
+    padding: 15vh;
+    background-color: rgba(115, 115, 115, .1)
+  }
+  .quote {
+    background-color: white;
+    padding: 10vh;
+    border-radius: 10px;
+    margin-top: 5vh;
   }
   .quote-image {
     border-radius: 50%;
   }
-  .quote-right {
-    border-right: 5px solid #D9E021;
-  }
   .quote-spotlight {
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-family: 'Permanent Marker', cursive;
   }
   .right {
@@ -424,6 +467,9 @@ font-family: 'Source Sans Pro', sans-serif;
     font-size: 2rem;
     font-weight: bold;
     margin: 0 0 1rem 0;
+  }
+  .spacer {
+    height: 25vh;
   }
   /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
@@ -557,6 +603,19 @@ font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
 }
 @media only screen and (max-width: 600px){
+  .audio-hero-div {
+  margin: 0vh;
+}
+.info-title {
+  font-size: 5vw;
+}
+.color-block-2, .color-block-1 {
+  margin: 0;
+  background: white;
+}
+.quote {
+  background-color: rgba(255, 255, 255, 0.6);
+}
   .hero-image {
     display: block;
     z-index:-1;
@@ -576,9 +635,21 @@ font-family: 'Source Sans Pro', sans-serif;
     color: white;
     transform: translateY(5vh);
   }
+
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
   /* For tablets: */
+  .audio-hero-div {
+    margin: 0vh;
+  }
+  .color-block-2, .color-block-1 {
+    margin: 0;
+    background: white;
+  }
+  .quote {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+   }
   .col-md-1 {width: 8.33%;}
   .col-md-2 {width: 16.66%;}
   .col-md-3 {width: 25%;}
@@ -607,6 +678,17 @@ font-family: 'Source Sans Pro', sans-serif;
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 }
-/* audio  */
+/* animations  */
 
 
+@keyframes floating {
+  0% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(0,-5px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+  }

@@ -77,7 +77,7 @@
         'name'        => esc_html__('Front Page Section 2', 'wphierarchy'),
         'id'          => 'front-page-section-2',
         'description' => esc_html__('Add widgets for front page section 2 here', 'wphierarchy'),
-        'before-widget' => '<section class="widget">',
+        'before-widget' => '<section class="widget front-section">',
         'after-widget' => '</section>',
         'before-title' => '<h2 class="widget-title">',
         'after-title' => '</h2>'
@@ -92,9 +92,9 @@
         'after-title' => '</h2>'
     ]);
     register_sidebar( [
-        'name'        => esc_html__('Front Page Section 3', 'wphierarchy'),
-        'id'          => 'front-page-section-3',
-        'description' => esc_html__('Add widgets for front page section 3 here', 'wphierarchy'),
+        'name'        => esc_html__('Front Page Section 4', 'wphierarchy'),
+        'id'          => 'front-page-section-4',
+        'description' => esc_html__('Add widgets for front page section 4 here', 'wphierarchy'),
         'before-widget' => '<section class="widget">',
         'after-widget' => '</section>',
         'before-title' => '<h2 class="widget-title">',
