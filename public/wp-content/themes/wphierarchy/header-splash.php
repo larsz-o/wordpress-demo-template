@@ -9,6 +9,7 @@
 <div id="page">
     <header class="site-header" role="banner">
         <a href="#content" class="skip-link screen-reader-text"><?php esc_html_e('Skip to content', 'wphierarchy');?></a>
+        <?php get_template_part( 'template-parts/umn', 'header' )?>
         <div id="masthead" class="header">
         <?php get_sidebar('front-page')?>
         </div>

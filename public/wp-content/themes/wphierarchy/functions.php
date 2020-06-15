@@ -17,8 +17,8 @@
         // change time() to version in production
         wp_enqueue_style( 'fonts-css', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Varela+Round',[], time(), 'all' );
         wp_enqueue_style( 'more-fonts-css', 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap',[], time(), 'all' );
-    
-        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css', 'more-fonts-css'], time(), 'all');
+        wp_enqueue_style( 'branding-css', get_stylesheet_directory_uri() . '/branding/css/umn-styles.css', [], time(), 'all');
+        wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', ['fonts-css', 'more-fonts-css', 'branding-css'], time(), 'all');
     }
     add_action( 'wp_enqueue_scripts','wphierarchy_enqueue_styles' );
      //load in js

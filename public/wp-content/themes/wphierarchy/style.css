@@ -1,7 +1,6 @@
 
 a {
-  color: #4640ff;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .align-items-center {
   align-items: baseline;
@@ -16,7 +15,6 @@ audio {
   width: 100%;
   margin-top: 0;
 }
-
 audio:focus{
   outline: none;
 }
@@ -28,6 +26,7 @@ audio:focus-visible {
 }
 .audio-hero-container {
   padding: 5vw;
+  padding-top: 15vh;
   background-color: whitesmoke;
 }
 .audio-hero-div {
@@ -67,7 +66,7 @@ audio:focus-visible {
 }
 
 .button {
-  background: radial-gradient(circle at 20% 20%,#5183f5 25%,#4640ff 100%) !important;
+  background: #1e1746;
   box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
   color: white;
   padding: 10px;
@@ -82,7 +81,8 @@ audio:focus-visible {
 }
 .button:hover {
   cursor: pointer;
-  background: radial-gradient(circle at 20% -20%,#5183f5 -25%,#4640ff -100%);
+  background: radial-gradient(circle at 20%,#5183f5 25%,#4640ff 100%);
+  transition: .2s ease;
 }
 .button:focus{
   outline: none;
@@ -112,26 +112,22 @@ audio:focus-visible {
   right: 0;
 }
 .button-donate {
-  cursor: pointer;
-  font-family: 'Varela Round', sans-serif;
-  background-color: black;
-  border: 0 solid transparent;
-  border-radius: 10px;
-  color: white;
-  box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
   padding: 15px;
   align-self: center;
-  font-size: 1.1em;
+ 
 }
 .button-donate:focus{
   outline: none;
 }
 .button-donate:focus-visible {
-  outline: 3px solid black;
+  outline: 3px solid #4640ff;
 }
 .button-donate:active{
   transform: translateY(4px);
   box-shadow: 0.1rem 0.25rem 0.75rem 0 rgba(100,110,140,.9);
+}
+.button-donate:hover {
+  background: radial-gradient(circle at 20% 20%,#23236c 25%,#1e1746 100%);
 }
 .button-subscribe { 
   background-color: transparent;
@@ -189,6 +185,10 @@ audio:focus-visible {
     background-size: cover;
     padding: 10vh;
   }
+  .entry-content {
+    padding: 10vh;
+    padding-top: 0;
+  }
   .flex-baseline {
     align-items: baseline;
   }
@@ -237,24 +237,27 @@ audio:focus-visible {
   padding: 5vw;
 }
 footer.site-footer {
-  margin: 2rem auto 1rem;
+  text-align: center;
   margin-bottom: 0;
   margin-top: 40vh;
   }
  
   h1, h2, h3,
   .site-title {
-    font-family: 'Varela Round', sans-serif; 
+    font-family: 'Varela Round', sans-serif !important; 
   }
   h1 a {
     font-size: 2rem;
-    color: #ffffff; 
+    color: #ffffff !important; 
   }
   h2 {
     margin:  2rem 0 1rem;
   }
   h2.search-title {
     text-transform: capitalize;
+  }
+  .helper-text {
+    font-weight: 400;
   }
   .hero {
     position: relative;
@@ -278,14 +281,15 @@ footer.site-footer {
   overflow: hidden;
    height: 100vh;
    background-color: black;
+   /* background: url("https://tohp-transcripts.s3.amazonaws.com/transcripts-banner-01.png"); */
    background: url("https://tohp-transcripts.s3.amazonaws.com/banner.png");
    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-position: top center;
+
  }
  .hero-small{
    height: 25vh;
-   background-position: bottom left;
+   background-position: center;
  }
  .hero-title-small {
    transform: translateY(0vh);
@@ -304,6 +308,10 @@ font-family: 'Source Sans Pro', sans-serif;
    padding: 5px;
    margin: 10px;
    cursor: pointer;
+ }
+ .icon-headphones {
+   height: 150px;
+   width: 150px;
  }
  .icon-person {
    border-radius: 50%;
@@ -380,17 +388,13 @@ margin-left: 5vw;
     margin: .5rem 0;
   }
   #masthead {
-    background-color:#fff;
+    background-color:#1e1746;
     padding: 10px 16px;
     box-shadow: 0 1px 5px rgba(0,0,0,.2);
     z-index: 1000;
+    color: white;
   }
-  nav {
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(115, 115, 115, .9);
-    padding: 5vh;
-  }
+
   nav li a {
     color: white;
   }
@@ -405,15 +409,16 @@ margin-left: 5vw;
   }
  
  .person-caption {
-
-text-align: center;
-padding: 10px;
+  text-align: center;
+  padding: 10px;
  }
 .person-caption > a {
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: #2E294E;
- 
+}
+.person-post {
+  padding-top: 15vh;
 }
   pre {
     background: #222;
@@ -482,7 +487,10 @@ padding: 10px;
 .sticky + #content {
   padding-top: 102px;
 }
-
+.transcripts-link {
+  color: #4640ff;
+  text-decoration: none;
+}
   video {
     max-width: 100%;
   }
@@ -626,11 +634,11 @@ padding: 10px;
     background: url("https://tohp-transcripts.s3.amazonaws.com/banner.png");
     background-repeat: no-repeat;
    background-attachment: fixed;
-   background-position: top center;
+   background-position: center;
   }
   .hero-small{
     height: 25vh;
-    background-position: bottom center;
+    background-position:center;
   }
   .hero-title-small > a {
     color: white;
@@ -651,6 +659,20 @@ padding: 10px;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.6);
    }
+   .hero-image {
+    display: block;
+    z-index:-1;
+    min-width: 100vw;
+   overflow: hidden;
+    height: 100vh;
+    background: url("https://tohp-transcripts.s3.amazonaws.com/banner.png");
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+  }
+  .hero-small{
+    height: 25vh;
+  }
   .col-md-1 {width: 8.33%;}
   .col-md-2 {width: 16.66%;}
   .col-md-3 {width: 25%;}
